@@ -1,0 +1,16 @@
+#input = quadratic equation
+eq = input()
+eq = eq.lower()
+eq = eq.replace(' ','')
+eq = eq.replace('=0','')
+eq = eq.replace('0=','')
+eq = eq.replace('y=','')
+px = eq.index('x')
+a = float(eq[0:px])
+eq = eq[px+3:len(eq)]
+px = eq.index('x')
+b = float(eq[0:px])
+c = float(eq[px+1:len(eq)])
+x1 = (-b+(b**2-4*a*c)**0.5)/(2*a)
+x2 = (-b-(b**2-4*a*c)**0.5)/(2*a)
+print('x =',x1,'or',x2)
